@@ -19,3 +19,10 @@ echo "Line appended through file descriptor" >&5
 echo "Now reading content from the file."
 cat test.txt
 
+
+if ! rm test.txt 2>/dev/null; then
+	echo -e "\e[1;31m Trying to delete the test.txt file created for running this script. Not Found \e[0m"
+else
+	echo "Deleted the test.txt file, created for running this script."
+fi
+
