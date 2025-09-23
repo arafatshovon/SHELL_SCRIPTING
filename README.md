@@ -18,7 +18,7 @@ I am following some free books. You can find the links of the books down here.
 print_red_line()
 {
     lines=$@
-    for line in lines;
+    for line in ${lines[@]};
     do
         echo -e "\e[1;31m $line \e[0m]"
     done
