@@ -31,6 +31,31 @@ if [[ $? -eq 0 ]];then echo -e "\e[1;32m \nSuccessfully Removed The Dummy Files 
 else echo -e "\e[1;31m Unable To remove the dummy files!!! \e[0m"
 fi
 
+echo -e "\nWe can use \e[1;31m -type \e[0m flags for finding out exact file type from the directory."
+echo -e "Command \e[1;31m find . -type f -name <name> -print \e[0m"
+echo -e "Different flags for different type can be used:\n"
+declare -A flag_type=(
+	[d]=directory 
+	[f]='Regular_file' 
+	[l]='symbolic link' 
+	[s]=socket [b]='block device'
+)
 
+for flag in ${!flag_type[@]};
+do
+	echo -e "\e[1;34m $flag : ${flag_type[$flag]} \e[0m";
+done
+
+find ~/projects -maxdepth 2 -type f
+
+echo -e "\n\e[1;31m WE can find files based on accesstime, content modified time and metadata_changed time \e[0m"
+echo -e "command \e[1;31m find . -type f -atime -7 -print"
+find ~/projects -maxdepth 2 -type f -atime -7 -name ".txt" -print
+
+echo -e "\n Search Based On file size"
+echo -e "command \e[1;31m find . -size 2k -maxdepth 1 -print \e[0m"
+find ~/projects -maxdepth 3 -type f -size +10k -print
+
+echo -e "\e[1;31m We can use -perm -user for finding file \e[0m"
 
 
