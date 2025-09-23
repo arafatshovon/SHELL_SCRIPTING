@@ -26,5 +26,8 @@ else
         echo -e "\e[1;32m Could not delete dummy data.\e[0m"
 fi
 
+echo -e "We can shrink down the operations of find command using \e[1;32m -prune \e[0m flag and grouping them"
+echo -e "command : \e[1;32m find . \( -name '*.git' -prune)\) -o \( -name '*.sh' -print \) \e[0m]"
+find ~/projects/SHELL_SCRIPTS \( -name '*.git' -prune \) -o \( -name '*.sh' -print \)
 
 
