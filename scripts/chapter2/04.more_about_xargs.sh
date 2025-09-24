@@ -11,7 +11,7 @@ touch text\ file\ with\ spaces.txt
 echo -e "This is the first line from spaced file\nThis is the second line from spaced file\nThis is the third line from spaced file." > text\ file\ with\ spaces.txt
 
 touch text_file_without_spaces.txt
-echo -e "This is the first line from without spaced file\nThis is the second line from without spaced file\nThis is the third line from without spaced file" > text_file_with_space.txt
+echo -e "This is the first line from without spaced file\nThis is the second line from without spaced file\nThis is the third line from without spaced file" > text_file_without_spaces.txt
 
 echo -e "Lets count the number of lines in the text files in this directory."
 find . -type f -name "*.txt" -print | xargs wc -l
@@ -23,6 +23,6 @@ find . -type f -name "*.txt" -print0 | xargs -0 wc -l
 
 echo -e "\n\e[1;34mRemoving helper files"
 
-rm text_file_without_spaces.txt
-rm text\ file\ with\ spaces.txt
+rm -f ./text_file_without_spaces.txt
+rm -f ./text\ file\ with\ spaces.txt
 
