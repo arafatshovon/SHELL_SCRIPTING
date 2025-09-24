@@ -22,4 +22,6 @@ echo -e "\nWe can give other arguments along wiht arguments reading from a file 
 echo -e "command : \e[1;32m cat output.txt | xargs -I {} /print_arguments.sh -p {} -1"
 cat output.txt | xargs -I {} ./print_arguments.sh "first_argument" {} "third_argument"
 
+echo -e "Removing helper files:"
+rm output.txt
 

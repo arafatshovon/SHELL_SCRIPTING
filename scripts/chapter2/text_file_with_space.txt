@@ -1,0 +1,3 @@
+This is the first line from without spaced file
+This is the second line from without spaced file
+This is the third line from without spaced file
