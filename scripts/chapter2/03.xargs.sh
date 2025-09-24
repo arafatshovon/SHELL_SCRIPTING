@@ -18,5 +18,8 @@ echo -e "WE can send arguments to another shell script using xargs. For example 
 
 cat output.txt | xargs -n 2 ./print_arguments.sh
 
+echo -e "\nWe can give other arguments along wiht arguments reading from a file using the xargs commands. So noth variable arguments and constants argumnts."
+echo -e "command : \e[1;32m cat output.txt | xargs -I {} /print_arguments.sh -p {} -1"
+cat output.txt | xargs -I {} ./print_arguments.sh "first_argument" {} "third_argument"
 
 
