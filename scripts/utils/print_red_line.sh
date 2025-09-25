@@ -2,6 +2,6 @@
 
 for line in "$@";
 do 
-	echo -e "\e[1;32m $line \e[0m"
+	echo -e "\e[1;31m $line \e[0m"
 done
 

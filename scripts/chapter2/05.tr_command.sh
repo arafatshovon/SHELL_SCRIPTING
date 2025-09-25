@@ -16,3 +16,18 @@ cat test.txt
 
 echo -e "\nRemove the tabs using tr command: \e[1;32m tr '\t' ' ' < test.txt \e[0m"
 tr '\t' ' ' < test.txt | cat | xargs -I {} ../utils/print_green_line.sh {}
+
+echo -e "We can use -d flag to delete a set of characters from stdin. command \e[1;31m command1 | tr -d <set_of_character>"
+text="Hello 123 world 456. The numeric values will be deleted form the lines"
+echo -e "\e[1;32m$text\e[0m"
+echo "Output:$text" | tr -d '0-9'
+
+echo "We can use -s flag for squeezeing multiple occuring characters into single."
+text="This line contains multiple    spaces some     where. So many  spaces in this line."
+echo -e "\e[1;32m$text\e[0m"
+echo -e "\e[1;32mOutput:$text\e[0m" | tr -s ' '
+
+
+
+
+
