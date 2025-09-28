@@ -1,0 +1,23 @@
+category:1
+apple
+banana
+grape
+mango
+
+category:2
+rice
+wheat
+grain
+maze
+
+category:3
+sunflowwer oil
+palm oil
+mustatrd oil
+olive oil
+
+category:4
+soap
+hand wash
+toilet cleaner
+glass cleaner
